@@ -1,25 +1,14 @@
 # amplify
-.amplify
-amplify_outputs*
-amplifyconfiguration*
+#.amplify
+#amplify_outputs*
+#amplifyconfiguration*
 # macOS system files
-.DS_Store
+#.DS_Store
 
 # JetBrains IDE (WebStorm, IntelliJ, etc.)
-.idea/
+#.idea/
 
 # Node dependencies (if not already ignored)
-node_modules/
+#node_modules/
 
-# Environment/config files (if applicable)
-.env
-.env.local
-.env.*.local
 
-# Log files
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# OS metadata files
-Thumbs.db
