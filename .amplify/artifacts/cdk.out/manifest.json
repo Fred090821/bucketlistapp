@@ -1,0 +1,1313 @@
+{
+  "version": "41.0.0",
+  "artifacts": {
+    "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347.template.json",
+        "terminationProtection": false,
+        "tags": {
+          "amplify:deployment-type": "sandbox",
+          "created-by": "amplify"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c07041d20b4194c7bc4d175ce20d8e9cef209887f2237ef6ddd3192974362524.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347.assets"
+      ],
+      "metadata": {
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "amplify:deployment-type",
+                "Value": "sandbox"
+              },
+              {
+                "Key": "created-by",
+                "Value": "amplify"
+              }
+            ]
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/deploymentType": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "deploymentType"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/region": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "region"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/auth/amplifyAuth/UserPool/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthUserPool4BA7F805"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/auth/amplifyAuth/UserPoolAppClient/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthUserPoolAppClient2626C6F8"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/auth/amplifyAuth/IdentityPool": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthIdentityPool3FDE84CC"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/auth/amplifyAuth/authenticatedUserRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthauthenticatedUserRoleD8DA3689"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/auth/amplifyAuth/unauthenticatedUserRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthunauthenticatedUserRole2B524D9E"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/auth/amplifyAuth/IdentityPoolRoleAttachment": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthIdentityPoolRoleAttachment045F17C8"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/auth/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/auth/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/auth/amplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthUserPoolFF9971F6Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthUserPoolFF9971F6Ref"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/auth/amplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthUserPoolAppClientB7A0DCB2Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthUserPoolAppClientB7A0DCB2Ref"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/auth/amplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthIdentityPoolA404828ERef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthIdentityPoolA404828ERef"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/auth/amplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthauthenticatedUserRole013CC805Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthauthenticatedUserRole013CC805Ref"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/auth/amplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthunauthenticatedUserRole78B3AEDCRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthunauthenticatedUserRole78B3AEDCRef"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/auth.NestedStack/auth.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "auth179371D7"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/userPoolId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "userPoolId"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/webClientId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "webClientId"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/identityPoolId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "identityPoolId"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/authRegion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authRegion"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/allowUnauthenticatedIdentities": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "allowUnauthenticatedIdentities"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/signupAttributes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "signupAttributes"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/usernameAttributes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "usernameAttributes"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/verificationMechanisms": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "verificationMechanisms"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/passwordPolicyMinLength": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "passwordPolicyMinLength"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/passwordPolicyRequirements": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "passwordPolicyRequirements"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/mfaConfiguration": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mfaConfiguration"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/mfaTypes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mfaTypes"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/socialProviders": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "socialProviders"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/oauthCognitoDomain": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthCognitoDomain"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/oauthScope": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthScope"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/oauthRedirectSignIn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthRedirectSignIn"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/oauthRedirectSignOut": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthRedirectSignOut"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/oauthResponseType": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthResponseType"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/oauthClientId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthClientId"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/groups": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "groups"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/GraphQLAPI/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataGraphQLAPI42A6FA33"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/GraphQLAPI/TransformerSchema": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataGraphQLAPITransformerSchemaFF50A789"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/GraphQLAPI/NONE_DS": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "NONE_DS"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/GraphQLAPI/NONE_DS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataGraphQLAPINONEDS684BF699"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "NONE_DS"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/AmplifyTableManager/AmplifyManagedTableIsCompleteRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyManagedTableIsCompleteRoleF825222C"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/AmplifyTableManager/AmplifyManagedTableOnEventRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyManagedTableOnEventRoleB4E71DEA"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/AmplifyTableManager/AmplifyManagedTableOnEventRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyManagedTableOnEventRoleDefaultPolicyF6DABCB6"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TableManagerCustomProviderframeworkonEvent1DFC2ECC"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider/framework-isComplete/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TableManagerCustomProviderframeworkisComplete2E51021B"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyTableWaiterStateMachineRole470BE899"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyTableWaiterStateMachineRoleDefaultPolicy89F3836A"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyTableWaiterStateMachine060600BC"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/AmplifyTableManager/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/AmplifyTableManager/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/AmplifyTableManager/reference-to-amplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/AmplifyTableManager/amplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEventD0C3FB74Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEventD0C3FB74Arn"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/AmplifyTableManager.NestedStack/AmplifyTableManager.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource86290833"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/DynamoDBModelTableReadIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableReadIOPS"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/DynamoDBModelTableWriteIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableWriteIOPS"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/DynamoDBBillingMode": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBBillingMode"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/DynamoDBEnablePointInTimeRecovery": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnablePointInTimeRecovery"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/DynamoDBEnableServerSideEncryption": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnableServerSideEncryption"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/HasEnvironmentParameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HasEnvironmentParameter"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/ShouldUsePayPerRequestBilling": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShouldUsePayPerRequestBilling"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/ShouldUsePointInTimeRecovery": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShouldUsePointInTimeRecovery"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/BucketItemTable": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "BucketItem"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/BucketItemTable/Default/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketItemTable"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "BucketItem"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/CustomTableBucketItemTable": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "BucketItem"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/GetAttBucketItemTableStreamArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetAttBucketItemTableStreamArn"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/GetAttBucketItemTableName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetAttBucketItemTableName"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/BucketItemIAMRole": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "BucketItemIAMRole"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/BucketItemIAMRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketItemIAMRole98F26374"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "BucketItemIAMRole"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/BucketItemDataSource": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "BucketItemTable"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/BucketItemDataSource/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketItemDataSource"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "BucketItemTable"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/QuerygetBucketItemauth0Function/QuerygetBucketItemauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerygetBucketItemauth0FunctionQuerygetBucketItemauth0FunctionAppSyncFunction89DB437D"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerygetBucketItemauth0Function"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/QuerygetBucketItempostAuth0Function/QuerygetBucketItempostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerygetBucketItempostAuth0FunctionQuerygetBucketItempostAuth0FunctionAppSyncFunction382F3AF1"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerygetBucketItempostAuth0Function"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/QueryGetBucketItemDataResolverFn/QueryGetBucketItemDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QueryGetBucketItemDataResolverFnQueryGetBucketItemDataResolverFnAppSyncFunctionD0E7DC51"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QueryGetBucketItemDataResolverFn"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/queryGetBucketItemResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetBucketItemResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Query.getBucketItem"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/QuerylistBucketItemsauth0Function/QuerylistBucketItemsauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerylistBucketItemsauth0FunctionQuerylistBucketItemsauth0FunctionAppSyncFunctionCEEF701D"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerylistBucketItemsauth0Function"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/QuerylistBucketItemspostAuth0Function/QuerylistBucketItemspostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerylistBucketItemspostAuth0FunctionQuerylistBucketItemspostAuth0FunctionAppSyncFunctionE56E2360"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerylistBucketItemspostAuth0Function"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/QueryListBucketItemsDataResolverFn/QueryListBucketItemsDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QueryListBucketItemsDataResolverFnQueryListBucketItemsDataResolverFnAppSyncFunction41A25748"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QueryListBucketItemsDataResolverFn"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/queryListBucketItemsResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ListBucketItemResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Query.listBucketItems"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationcreateBucketIteminit0Function/MutationcreateBucketIteminit0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateBucketIteminit0FunctionMutationcreateBucketIteminit0FunctionAppSyncFunction00CE0FAE"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateBucketIteminit0Function"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationcreateBucketItemauth0Function/MutationcreateBucketItemauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateBucketItemauth0FunctionMutationcreateBucketItemauth0FunctionAppSyncFunctionD86AB798"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateBucketItemauth0Function"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationcreateBucketItempostAuth0Function/MutationcreateBucketItempostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateBucketItempostAuth0FunctionMutationcreateBucketItempostAuth0FunctionAppSyncFunction02FAF5F3"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateBucketItempostAuth0Function"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationCreateBucketItemDataResolverFn/MutationCreateBucketItemDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationCreateBucketItemDataResolverFnMutationCreateBucketItemDataResolverFnAppSyncFunctionFE7096BC"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationCreateBucketItemDataResolverFn"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/mutationCreateBucketItemResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateBucketItemResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Mutation.createBucketItem"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationupdateBucketIteminit0Function/MutationupdateBucketIteminit0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateBucketIteminit0FunctionMutationupdateBucketIteminit0FunctionAppSyncFunction1F6525DC"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateBucketIteminit0Function"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationupdateBucketItemauth0Function/MutationupdateBucketItemauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateBucketItemauth0FunctionMutationupdateBucketItemauth0FunctionAppSyncFunction3812EF10"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateBucketItemauth0Function"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationupdateBucketItempostAuth0Function/MutationupdateBucketItempostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateBucketItempostAuth0FunctionMutationupdateBucketItempostAuth0FunctionAppSyncFunctionBCFB14EB"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateBucketItempostAuth0Function"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationUpdateBucketItemDataResolverFn/MutationUpdateBucketItemDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationUpdateBucketItemDataResolverFnMutationUpdateBucketItemDataResolverFnAppSyncFunction899AF5CA"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationUpdateBucketItemDataResolverFn"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/mutationUpdateBucketItemResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UpdateBucketItemResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Mutation.updateBucketItem"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationdeleteBucketItemauth0Function/MutationdeleteBucketItemauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationdeleteBucketItemauth0FunctionMutationdeleteBucketItemauth0FunctionAppSyncFunctionB570D9CB"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationdeleteBucketItemauth0Function"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationdeleteBucketItempostAuth0Function/MutationdeleteBucketItempostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationdeleteBucketItempostAuth0FunctionMutationdeleteBucketItempostAuth0FunctionAppSyncFunction3499C719"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationdeleteBucketItempostAuth0Function"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationDeleteBucketItemDataResolverFn/MutationDeleteBucketItemDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationDeleteBucketItemDataResolverFnMutationDeleteBucketItemDataResolverFnAppSyncFunctionC3B16841"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationDeleteBucketItemDataResolverFn"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/mutationDeleteBucketItemResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeleteBucketItemResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Mutation.deleteBucketItem"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/SubscriptiononCreateBucketItemauth0Function/SubscriptiononCreateBucketItemauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononCreateBucketItemauth0FunctionSubscriptiononCreateBucketItemauth0FunctionAppSyncFunction85335266"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononCreateBucketItemauth0Function"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/SubscriptiononCreateBucketItempostAuth0Function/SubscriptiononCreateBucketItempostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononCreateBucketItempostAuth0FunctionSubscriptiononCreateBucketItempostAuth0FunctionAppSyncFunction84051B6B"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononCreateBucketItempostAuth0Function"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/SubscriptionOnCreateBucketItemDataResolverFn/SubscriptionOnCreateBucketItemDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionOnCreateBucketItemDataResolverFnSubscriptionOnCreateBucketItemDataResolverFnAppSyncFunction7311D460"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptionOnCreateBucketItemDataResolverFn"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/subscriptionOnCreateBucketItemResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononCreateBucketItemResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Subscription.onCreateBucketItem"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/SubscriptiononUpdateBucketItemauth0Function/SubscriptiononUpdateBucketItemauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononUpdateBucketItemauth0FunctionSubscriptiononUpdateBucketItemauth0FunctionAppSyncFunctionF9BABFBA"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononUpdateBucketItemauth0Function"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/SubscriptiononUpdateBucketItempostAuth0Function/SubscriptiononUpdateBucketItempostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononUpdateBucketItempostAuth0FunctionSubscriptiononUpdateBucketItempostAuth0FunctionAppSyncFunction96971FD3"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononUpdateBucketItempostAuth0Function"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/SubscriptionOnUpdateBucketItemDataResolverFn/SubscriptionOnUpdateBucketItemDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionOnUpdateBucketItemDataResolverFnSubscriptionOnUpdateBucketItemDataResolverFnAppSyncFunctionF87A1D9D"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptionOnUpdateBucketItemDataResolverFn"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/subscriptionOnUpdateBucketItemResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononUpdateBucketItemResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Subscription.onUpdateBucketItem"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/SubscriptiononDeleteBucketItemauth0Function/SubscriptiononDeleteBucketItemauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononDeleteBucketItemauth0FunctionSubscriptiononDeleteBucketItemauth0FunctionAppSyncFunction5D8BE61E"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononDeleteBucketItemauth0Function"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/SubscriptiononDeleteBucketItempostAuth0Function/SubscriptiononDeleteBucketItempostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononDeleteBucketItempostAuth0FunctionSubscriptiononDeleteBucketItempostAuth0FunctionAppSyncFunction310B6E3E"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononDeleteBucketItempostAuth0Function"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/SubscriptionOnDeleteBucketItemDataResolverFn/SubscriptionOnDeleteBucketItemDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionOnDeleteBucketItemDataResolverFnSubscriptionOnDeleteBucketItemDataResolverFnAppSyncFunction43463767"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptionOnDeleteBucketItemDataResolverFn"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/subscriptionOnDeleteBucketItemResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononDeleteBucketItemResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Subscription.onDeleteBucketItem"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/BucketItemOwnerDataResolverFn/BucketItemOwnerDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketItemOwnerDataResolverFnBucketItemOwnerDataResolverFnAppSyncFunction095C74A9"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "BucketItemOwnerDataResolverFn"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/bucketItemOwnerResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketItemownerResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "BucketItem.owner"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/reference-to-amplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource1399283DOutputs.amplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEventD0C3FB74Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource1399283DOutputsamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataAmplifyTableManagerTabAF27C296"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/reference-to-amplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/reference-to-amplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/reference-to-amplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputs.amplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthauthenticatedUserRole013CC805Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthauthenticatedUserRole013CC805Ref"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/reference-to-amplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputs.amplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthunauthenticatedUserRole78B3AEDCRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthunauthenticatedUserRole78B3AEDCRef"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/reference-to-amplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputs.amplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthIdentityPoolA404828ERef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthIdentityPoolA404828ERef"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem.NestedStack/BucketItem.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataBucketItemNestedStackBucketItemNestedStackResource4311213E"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucket9CCB4ACA"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucketPolicyF1C1C548"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucketAutoDeleteObjectsCustomResource437F26F5"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentAwsCliLayerE322F905"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/CustomResource-1536MiB/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB21775929"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/DynamoDBModelTableReadIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableReadIOPS"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/DynamoDBModelTableWriteIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableWriteIOPS"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/DynamoDBBillingMode": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBBillingMode"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/DynamoDBEnablePointInTimeRecovery": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnablePointInTimeRecovery"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/DynamoDBEnableServerSideEncryption": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnableServerSideEncryption"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/LatestNodeRuntimeMap": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LatestNodeRuntimeMap"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
+          {
+            "type": "aws:cdk:is-custom-resource-handler-customResourceProvider",
+            "data": true
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB": [
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 2
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 2
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBServiceRoleA41FC8C2"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBServiceRoleDefaultPolicyFF1C635B"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBC5D8AB21"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/modelIntrospectionSchemaBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelIntrospectionSchemaBucketF566B665"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/modelIntrospectionSchemaBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelIntrospectionSchemaBucketPolicy4DAB0D15"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/modelIntrospectionSchemaBucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelIntrospectionSchemaBucketAutoDeleteObjectsCustomResourceFE57309F"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/modelIntrospectionSchemaBucketDeployment/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelIntrospectionSchemaBucketDeploymentAwsCliLayer13C432F7"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/modelIntrospectionSchemaBucketDeployment/CustomResource-1536MiB/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelIntrospectionSchemaBucketDeploymentCustomResource1536MiB104B97EC"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/AMPLIFY_DATA_GRAPHQL_ENDPOINTParameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AMPLIFYDATAGRAPHQLENDPOINTParameter1C2CBB16"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/AMPLIFY_DATA_MODEL_INTROSPECTION_SCHEMA_BUCKET_NAMEParameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AMPLIFYDATAMODELINTROSPECTIONSCHEMABUCKETNAMEParameter47BF4F44"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/AMPLIFY_DATA_MODEL_INTROSPECTION_SCHEMA_KEYParameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AMPLIFYDATAMODELINTROSPECTIONSCHEMAKEYParameterB6AEAE8A"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/AMPLIFY_DATA_DEFAULT_NAMEParameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AMPLIFYDATADEFAULTNAMEParameterE7C23CC4"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/reference-to-amplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputs.amplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthUserPoolFF9971F6Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthUserPoolFF9971F6Ref"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/reference-to-amplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputs.amplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthauthenticatedUserRole013CC805Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthauthenticatedUserRole013CC805Ref"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/reference-to-amplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputs.amplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthunauthenticatedUserRole78B3AEDCRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthunauthenticatedUserRole78B3AEDCRef"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/reference-to-amplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputs.amplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthIdentityPoolA404828ERef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthIdentityPoolA404828ERef"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0GraphQLUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0GraphQLUrl"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB4A422FD7DestinationBucketArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB4A422FD7DestinationBucketArn"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data.NestedStack/data.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "data7552DF31"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/awsAppsyncApiId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncApiId"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/awsAppsyncApiEndpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncApiEndpoint"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/awsAppsyncAuthenticationType": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncAuthenticationType"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/awsAppsyncRegion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncRegion"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/amplifyApiModelSchemaS3Uri": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyApiModelSchemaS3Uri"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/awsAppsyncAdditionalAuthenticationTypes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncAdditionalAuthenticationTypes"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/storage/amplifyBucketTrackerImages/Bucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyBucketTrackerImagesBucket720E7093"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/storage/amplifyBucketTrackerImages/Bucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyBucketTrackerImagesBucketPolicyB7B492F7"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/storage/amplifyBucketTrackerImages/Bucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyBucketTrackerImagesBucketAutoDeleteObjectsCustomResourceC9D561D9"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/storage/LatestNodeRuntimeMap": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LatestNodeRuntimeMap"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
+          {
+            "type": "aws:cdk:is-custom-resource-handler-customResourceProvider",
+            "data": true
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/storage/AMPLIFY_BUCKET_TRACKER_IMAGES_BUCKET_NAMEParameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AMPLIFYBUCKETTRACKERIMAGESBUCKETNAMEParameterD0A7B4F8"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/storage/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347--storageAccess4/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifybucketlistappjaydenassisandbox0a34c6e347storageAccess4AA2DDB1C"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/storage/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/storage/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/storage/reference-to-amplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputs.amplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthauthenticatedUserRole013CC805Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthauthenticatedUserRole013CC805Ref"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/storage/amplifybucketlistappjaydenassisandbox0a34c6e347storageamplifyBucketTrackerImagesBucketF1405D75Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifybucketlistappjaydenassisandbox0a34c6e347storageamplifyBucketTrackerImagesBucketF1405D75Ref"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/storage.NestedStack/storage.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "storage0EC3F24A"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/storageRegion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "storageRegion"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/bucketName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bucketName"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/buckets": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "buckets"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  },
+  "minimumCliVersion": "2.1005.0"
+}

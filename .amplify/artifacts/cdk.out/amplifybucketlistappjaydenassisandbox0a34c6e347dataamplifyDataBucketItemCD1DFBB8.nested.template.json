@@ -1,0 +1,2171 @@
+{
+ "Parameters": {
+  "DynamoDBModelTableReadIOPS": {
+   "Type": "Number",
+   "Default": 5,
+   "Description": "The number of read IOPS the table should support."
+  },
+  "DynamoDBModelTableWriteIOPS": {
+   "Type": "Number",
+   "Default": 5,
+   "Description": "The number of write IOPS the table should support."
+  },
+  "DynamoDBBillingMode": {
+   "Type": "String",
+   "Default": "PAY_PER_REQUEST",
+   "AllowedValues": [
+    "PAY_PER_REQUEST",
+    "PROVISIONED"
+   ],
+   "Description": "Configure @model types to create DynamoDB tables with PAY_PER_REQUEST or PROVISIONED billing modes."
+  },
+  "DynamoDBEnablePointInTimeRecovery": {
+   "Type": "String",
+   "Default": "false",
+   "AllowedValues": [
+    "true",
+    "false"
+   ],
+   "Description": "Whether to enable Point in Time Recovery on the table."
+  },
+  "DynamoDBEnableServerSideEncryption": {
+   "Type": "String",
+   "Default": "true",
+   "AllowedValues": [
+    "true",
+    "false"
+   ],
+   "Description": "Enable server side encryption powered by KMS."
+  },
+  "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource1399283DOutputsamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataAmplifyTableManagerTabAF27C296": {
+   "Type": "String"
+  },
+  "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId": {
+   "Type": "String"
+  },
+  "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName": {
+   "Type": "String"
+  },
+  "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthauthenticatedUserRole013CC805Ref": {
+   "Type": "String"
+  },
+  "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthunauthenticatedUserRole78B3AEDCRef": {
+   "Type": "String"
+  },
+  "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthIdentityPoolA404828ERef": {
+   "Type": "String"
+  }
+ },
+ "Conditions": {
+  "HasEnvironmentParameter": {
+   "Fn::Not": [
+    {
+     "Fn::Equals": [
+      "NONE",
+      "NONE"
+     ]
+    }
+   ]
+  },
+  "ShouldUsePayPerRequestBilling": {
+   "Fn::Equals": [
+    {
+     "Ref": "DynamoDBBillingMode"
+    },
+    "PAY_PER_REQUEST"
+   ]
+  },
+  "ShouldUsePointInTimeRecovery": {
+   "Fn::Equals": [
+    {
+     "Ref": "DynamoDBEnablePointInTimeRecovery"
+    },
+    "true"
+   ]
+  },
+  "CDKMetadataAvailable": {
+   "Fn::Or": [
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "af-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-3"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-south-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-3"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-4"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ca-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ca-west-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "cn-north-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "cn-northwest-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-central-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-north-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-south-2"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-3"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "il-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "me-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "me-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "sa-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-east-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-west-1"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Equals": [
+      {
+       "Ref": "AWS::Region"
+      },
+      "us-west-2"
+     ]
+    }
+   ]
+  }
+ },
+ "Resources": {
+  "BucketItemTable": {
+   "Type": "Custom::AmplifyDynamoDBTable",
+   "Properties": {
+    "ServiceToken": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource1399283DOutputsamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataAmplifyTableManagerTabAF27C296"
+    },
+    "tableName": {
+     "Fn::Join": [
+      "",
+      [
+       "BucketItem-",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+       },
+       "-NONE"
+      ]
+     ]
+    },
+    "attributeDefinitions": [
+     {
+      "attributeName": "id",
+      "attributeType": "S"
+     }
+    ],
+    "keySchema": [
+     {
+      "attributeName": "id",
+      "keyType": "HASH"
+     }
+    ],
+    "provisionedThroughput": {
+     "Fn::If": [
+      "ShouldUsePayPerRequestBilling",
+      {
+       "Ref": "AWS::NoValue"
+      },
+      {
+       "ReadCapacityUnits": {
+        "Ref": "DynamoDBModelTableReadIOPS"
+       },
+       "WriteCapacityUnits": {
+        "Ref": "DynamoDBModelTableWriteIOPS"
+       }
+      }
+     ]
+    },
+    "sseSpecification": {
+     "sseEnabled": false
+    },
+    "streamSpecification": {
+     "streamViewType": "NEW_AND_OLD_IMAGES"
+    },
+    "deletionProtectionEnabled": false,
+    "allowDestructiveGraphqlSchemaUpdates": true,
+    "replaceTableUponGsiUpdate": true,
+    "pointInTimeRecoverySpecification": {
+     "Fn::If": [
+      "ShouldUsePointInTimeRecovery",
+      {
+       "PointInTimeRecoveryEnabled": true
+      },
+      {
+       "Ref": "AWS::NoValue"
+      }
+     ]
+    },
+    "billingMode": {
+     "Fn::If": [
+      "ShouldUsePayPerRequestBilling",
+      "PAY_PER_REQUEST",
+      {
+       "Ref": "AWS::NoValue"
+      }
+     ]
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/BucketItemTable/Default/Default"
+   }
+  },
+  "BucketItemIAMRole98F26374": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "appsync.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "Policies": [
+     {
+      "PolicyDocument": {
+       "Statement": [
+        {
+         "Action": [
+          "dynamodb:BatchGetItem",
+          "dynamodb:BatchWriteItem",
+          "dynamodb:PutItem",
+          "dynamodb:DeleteItem",
+          "dynamodb:GetItem",
+          "dynamodb:Scan",
+          "dynamodb:Query",
+          "dynamodb:UpdateItem",
+          "dynamodb:ConditionCheckItem",
+          "dynamodb:DescribeTable",
+          "dynamodb:GetRecords",
+          "dynamodb:GetShardIterator"
+         ],
+         "Effect": "Allow",
+         "Resource": [
+          {
+           "Fn::Sub": [
+            "arn:${AWS::Partition}:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${tablename}",
+            {
+             "tablename": {
+              "Fn::Join": [
+               "",
+               [
+                "BucketItem-",
+                {
+                 "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+                },
+                "-NONE"
+               ]
+              ]
+             }
+            }
+           ]
+          },
+          {
+           "Fn::Sub": [
+            "arn:${AWS::Partition}:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${tablename}/*",
+            {
+             "tablename": {
+              "Fn::Join": [
+               "",
+               [
+                "BucketItem-",
+                {
+                 "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+                },
+                "-NONE"
+               ]
+              ]
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "Version": "2012-10-17"
+      },
+      "PolicyName": "DynamoDBAccess"
+     }
+    ],
+    "RoleName": {
+     "Fn::Join": [
+      "",
+      [
+       "BucketItemIAMRole6c3726-",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+       },
+       "-NONE"
+      ]
+     ]
+    },
+    "Tags": [
+     {
+      "Key": "amplify:deployment-type",
+      "Value": "sandbox"
+     },
+     {
+      "Key": "amplify:friendly-name",
+      "Value": "amplifyData"
+     },
+     {
+      "Key": "created-by",
+      "Value": "amplify"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/BucketItemIAMRole/Resource"
+   }
+  },
+  "BucketItemDataSource": {
+   "Type": "AWS::AppSync::DataSource",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DynamoDBConfig": {
+     "AwsRegion": {
+      "Ref": "AWS::Region"
+     },
+     "TableName": {
+      "Fn::Select": [
+       1,
+       {
+        "Fn::Split": [
+         "/",
+         {
+          "Fn::Select": [
+           5,
+           {
+            "Fn::Split": [
+             ":",
+             {
+              "Fn::GetAtt": [
+               "BucketItemTable",
+               "TableArn"
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    "Name": "BucketItemTable",
+    "ServiceRoleArn": {
+     "Fn::GetAtt": [
+      "BucketItemIAMRole98F26374",
+      "Arn"
+     ]
+    },
+    "Type": "AMAZON_DYNAMODB"
+   },
+   "DependsOn": [
+    "BucketItemIAMRole98F26374"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/BucketItemDataSource/Resource"
+   }
+  },
+  "QuerygetBucketItemauth0FunctionQuerygetBucketItemauth0FunctionAppSyncFunction89DB437D": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerygetBucketItemauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/6b25c9b572c67e0f7ad41cb8019a90825f3db4b02a0a15b837c7a82dcb302060.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/QuerygetBucketItemauth0Function/QuerygetBucketItemauth0Function.AppSyncFunction"
+   }
+  },
+  "QuerygetBucketItempostAuth0FunctionQuerygetBucketItempostAuth0FunctionAppSyncFunction382F3AF1": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerygetBucketItempostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/QuerygetBucketItempostAuth0Function/QuerygetBucketItempostAuth0Function.AppSyncFunction"
+   }
+  },
+  "QueryGetBucketItemDataResolverFnQueryGetBucketItemDataResolverFnAppSyncFunctionD0E7DC51": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "BucketItemDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QueryGetBucketItemDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/08f4d557693d96c1a4efba0f9dc91330e4b19772fd5477c156468843e3d9cb5e.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/4c6a2d29f01c6091bd1d9afe16e5849d456c96f17c3b215938c8067399532719.vtl"
+    }
+   },
+   "DependsOn": [
+    "BucketItemDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/QueryGetBucketItemDataResolverFn/QueryGetBucketItemDataResolverFn.AppSyncFunction"
+   }
+  },
+  "GetBucketItemResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "FieldName": "getBucketItem",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "QuerygetBucketItemauth0FunctionQuerygetBucketItemauth0FunctionAppSyncFunction89DB437D",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QuerygetBucketItempostAuth0FunctionQuerygetBucketItempostAuth0FunctionAppSyncFunction382F3AF1",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QueryGetBucketItemDataResolverFnQueryGetBucketItemDataResolverFnAppSyncFunctionD0E7DC51",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Query\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"getBucketItem\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "BucketItemTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthauthenticatedUserRole013CC805Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthunauthenticatedUserRole78B3AEDCRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthIdentityPoolA404828ERef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Query"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/queryGetBucketItemResolver"
+   }
+  },
+  "QuerylistBucketItemsauth0FunctionQuerylistBucketItemsauth0FunctionAppSyncFunctionCEEF701D": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerylistBucketItemsauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/6b25c9b572c67e0f7ad41cb8019a90825f3db4b02a0a15b837c7a82dcb302060.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/QuerylistBucketItemsauth0Function/QuerylistBucketItemsauth0Function.AppSyncFunction"
+   }
+  },
+  "QuerylistBucketItemspostAuth0FunctionQuerylistBucketItemspostAuth0FunctionAppSyncFunctionE56E2360": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerylistBucketItemspostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/QuerylistBucketItemspostAuth0Function/QuerylistBucketItemspostAuth0Function.AppSyncFunction"
+   }
+  },
+  "QueryListBucketItemsDataResolverFnQueryListBucketItemsDataResolverFnAppSyncFunction41A25748": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "BucketItemDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QueryListBucketItemsDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/9fcbe070ecd3023c5bf5b966fa9584757db9762eef123bad0820bd87591b2174.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/cc01911d0269d4080ea57505dc445dfc315ef7ad85d3d9d4ea1357858bff451d.vtl"
+    }
+   },
+   "DependsOn": [
+    "BucketItemDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/QueryListBucketItemsDataResolverFn/QueryListBucketItemsDataResolverFn.AppSyncFunction"
+   }
+  },
+  "ListBucketItemResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "FieldName": "listBucketItems",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "QuerylistBucketItemsauth0FunctionQuerylistBucketItemsauth0FunctionAppSyncFunctionCEEF701D",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QuerylistBucketItemspostAuth0FunctionQuerylistBucketItemspostAuth0FunctionAppSyncFunctionE56E2360",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QueryListBucketItemsDataResolverFnQueryListBucketItemsDataResolverFnAppSyncFunction41A25748",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Query\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"listBucketItems\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "BucketItemTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthauthenticatedUserRole013CC805Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthunauthenticatedUserRole78B3AEDCRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthIdentityPoolA404828ERef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Query"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/queryListBucketItemsResolver"
+   }
+  },
+  "MutationcreateBucketIteminit0FunctionMutationcreateBucketIteminit0FunctionAppSyncFunction00CE0FAE": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreateBucketIteminit0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/a183ddccbd956316c38ef97177b8f088ef0826f62023323f5ae6053d348ccffc.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationcreateBucketIteminit0Function/MutationcreateBucketIteminit0Function.AppSyncFunction"
+   }
+  },
+  "MutationcreateBucketItemauth0FunctionMutationcreateBucketItemauth0FunctionAppSyncFunctionD86AB798": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreateBucketItemauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fe257aa0a3225cf952b2b9cafedeeab928e0b05fc5da08c6c673f59377223ae4.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationcreateBucketItemauth0Function/MutationcreateBucketItemauth0Function.AppSyncFunction"
+   }
+  },
+  "MutationcreateBucketItempostAuth0FunctionMutationcreateBucketItempostAuth0FunctionAppSyncFunction02FAF5F3": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreateBucketItempostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationcreateBucketItempostAuth0Function/MutationcreateBucketItempostAuth0Function.AppSyncFunction"
+   }
+  },
+  "MutationCreateBucketItemDataResolverFnMutationCreateBucketItemDataResolverFnAppSyncFunctionFE7096BC": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "BucketItemDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationCreateBucketItemDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/0b98fa00950ffbf72a0d6daf837d95279ce6d3198affbc28f721eb10eaa8fa1f.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f4a52b72209a9dfa197b5e7367a5c378c5bb86de6e29ddd9e48b49a3fe54b249.vtl"
+    }
+   },
+   "DependsOn": [
+    "BucketItemDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationCreateBucketItemDataResolverFn/MutationCreateBucketItemDataResolverFn.AppSyncFunction"
+   }
+  },
+  "CreateBucketItemResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "FieldName": "createBucketItem",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "MutationcreateBucketIteminit0FunctionMutationcreateBucketIteminit0FunctionAppSyncFunction00CE0FAE",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationcreateBucketItemauth0FunctionMutationcreateBucketItemauth0FunctionAppSyncFunctionD86AB798",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationcreateBucketItempostAuth0FunctionMutationcreateBucketItempostAuth0FunctionAppSyncFunction02FAF5F3",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationCreateBucketItemDataResolverFnMutationCreateBucketItemDataResolverFnAppSyncFunctionFE7096BC",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Mutation\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"createBucketItem\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "BucketItemTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthauthenticatedUserRole013CC805Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthunauthenticatedUserRole78B3AEDCRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthIdentityPoolA404828ERef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Mutation"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/mutationCreateBucketItemResolver"
+   }
+  },
+  "MutationupdateBucketIteminit0FunctionMutationupdateBucketIteminit0FunctionAppSyncFunction1F6525DC": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationupdateBucketIteminit0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/06db846fd14e6fc371f22b12b5545ba8e2dbfeda85d8c8d586c71c282166657b.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationupdateBucketIteminit0Function/MutationupdateBucketIteminit0Function.AppSyncFunction"
+   }
+  },
+  "MutationupdateBucketItemauth0FunctionMutationupdateBucketItemauth0FunctionAppSyncFunction3812EF10": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "BucketItemDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationupdateBucketItemauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1f5fed297da9c32ae3af922bf3a38ccf23b956078887d16891ec06c20c64722c.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/5d8ad0ca2645654084796f9c06939ee80150fb499b8db4c3ae2a4e132dfc8bf2.vtl"
+    }
+   },
+   "DependsOn": [
+    "BucketItemDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationupdateBucketItemauth0Function/MutationupdateBucketItemauth0Function.AppSyncFunction"
+   }
+  },
+  "MutationupdateBucketItempostAuth0FunctionMutationupdateBucketItempostAuth0FunctionAppSyncFunctionBCFB14EB": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationupdateBucketItempostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationupdateBucketItempostAuth0Function/MutationupdateBucketItempostAuth0Function.AppSyncFunction"
+   }
+  },
+  "MutationUpdateBucketItemDataResolverFnMutationUpdateBucketItemDataResolverFnAppSyncFunction899AF5CA": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "BucketItemDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationUpdateBucketItemDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/474bf0776ec2164a13191d1a0a9e057154931e4918fea5086f49850d02a5371b.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f4a52b72209a9dfa197b5e7367a5c378c5bb86de6e29ddd9e48b49a3fe54b249.vtl"
+    }
+   },
+   "DependsOn": [
+    "BucketItemDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationUpdateBucketItemDataResolverFn/MutationUpdateBucketItemDataResolverFn.AppSyncFunction"
+   }
+  },
+  "UpdateBucketItemResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "FieldName": "updateBucketItem",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "MutationupdateBucketIteminit0FunctionMutationupdateBucketIteminit0FunctionAppSyncFunction1F6525DC",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationupdateBucketItemauth0FunctionMutationupdateBucketItemauth0FunctionAppSyncFunction3812EF10",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationupdateBucketItempostAuth0FunctionMutationupdateBucketItempostAuth0FunctionAppSyncFunctionBCFB14EB",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationUpdateBucketItemDataResolverFnMutationUpdateBucketItemDataResolverFnAppSyncFunction899AF5CA",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Mutation\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"updateBucketItem\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "BucketItemTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthauthenticatedUserRole013CC805Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthunauthenticatedUserRole78B3AEDCRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthIdentityPoolA404828ERef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Mutation"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/mutationUpdateBucketItemResolver"
+   }
+  },
+  "MutationdeleteBucketItemauth0FunctionMutationdeleteBucketItemauth0FunctionAppSyncFunctionB570D9CB": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "BucketItemDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationdeleteBucketItemauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1f5fed297da9c32ae3af922bf3a38ccf23b956078887d16891ec06c20c64722c.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/867fb7d7eb8e4127b6d0136b82c5c3f74a52eb410297086859986f8e7e4b02aa.vtl"
+    }
+   },
+   "DependsOn": [
+    "BucketItemDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationdeleteBucketItemauth0Function/MutationdeleteBucketItemauth0Function.AppSyncFunction"
+   }
+  },
+  "MutationdeleteBucketItempostAuth0FunctionMutationdeleteBucketItempostAuth0FunctionAppSyncFunction3499C719": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationdeleteBucketItempostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationdeleteBucketItempostAuth0Function/MutationdeleteBucketItempostAuth0Function.AppSyncFunction"
+   }
+  },
+  "MutationDeleteBucketItemDataResolverFnMutationDeleteBucketItemDataResolverFnAppSyncFunctionC3B16841": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "BucketItemDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationDeleteBucketItemDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/4f7907d1209a2c9953a0c053df402c634e359546d70c7cc5c2e8e21ea734880f.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f4a52b72209a9dfa197b5e7367a5c378c5bb86de6e29ddd9e48b49a3fe54b249.vtl"
+    }
+   },
+   "DependsOn": [
+    "BucketItemDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/MutationDeleteBucketItemDataResolverFn/MutationDeleteBucketItemDataResolverFn.AppSyncFunction"
+   }
+  },
+  "DeleteBucketItemResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "FieldName": "deleteBucketItem",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "MutationdeleteBucketItemauth0FunctionMutationdeleteBucketItemauth0FunctionAppSyncFunctionB570D9CB",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationdeleteBucketItempostAuth0FunctionMutationdeleteBucketItempostAuth0FunctionAppSyncFunction3499C719",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationDeleteBucketItemDataResolverFnMutationDeleteBucketItemDataResolverFnAppSyncFunctionC3B16841",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Mutation\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"deleteBucketItem\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "BucketItemTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthauthenticatedUserRole013CC805Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthunauthenticatedUserRole78B3AEDCRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthIdentityPoolA404828ERef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Mutation"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/mutationDeleteBucketItemResolver"
+   }
+  },
+  "SubscriptiononCreateBucketItemauth0FunctionSubscriptiononCreateBucketItemauth0FunctionAppSyncFunction85335266": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononCreateBucketItemauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3b6d810ef43cdbd93ef462c40b0df0328b89e04f1473a4f82f1178da1f1d5aa0.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/SubscriptiononCreateBucketItemauth0Function/SubscriptiononCreateBucketItemauth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptiononCreateBucketItempostAuth0FunctionSubscriptiononCreateBucketItempostAuth0FunctionAppSyncFunction84051B6B": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononCreateBucketItempostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/SubscriptiononCreateBucketItempostAuth0Function/SubscriptiononCreateBucketItempostAuth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptionOnCreateBucketItemDataResolverFnSubscriptionOnCreateBucketItemDataResolverFnAppSyncFunction7311D460": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptionOnCreateBucketItemDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fe3c43ada4b9d681a5e2312663ef7a73386424d73b73e51f8e2e9d4b50f7c502.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e0cff47fb007f0bbf2a4e43ca256d6aa7ec109821769fd79fa7c5e83f0e7f9fc.vtl"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/SubscriptionOnCreateBucketItemDataResolverFn/SubscriptionOnCreateBucketItemDataResolverFn.AppSyncFunction"
+   }
+  },
+  "SubscriptiononCreateBucketItemResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "FieldName": "onCreateBucketItem",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononCreateBucketItemauth0FunctionSubscriptiononCreateBucketItemauth0FunctionAppSyncFunction85335266",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononCreateBucketItempostAuth0FunctionSubscriptiononCreateBucketItempostAuth0FunctionAppSyncFunction84051B6B",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptionOnCreateBucketItemDataResolverFnSubscriptionOnCreateBucketItemDataResolverFnAppSyncFunction7311D460",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Subscription\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"onCreateBucketItem\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthauthenticatedUserRole013CC805Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthunauthenticatedUserRole78B3AEDCRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthIdentityPoolA404828ERef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Subscription"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/subscriptionOnCreateBucketItemResolver"
+   }
+  },
+  "SubscriptiononUpdateBucketItemauth0FunctionSubscriptiononUpdateBucketItemauth0FunctionAppSyncFunctionF9BABFBA": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononUpdateBucketItemauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3b6d810ef43cdbd93ef462c40b0df0328b89e04f1473a4f82f1178da1f1d5aa0.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/SubscriptiononUpdateBucketItemauth0Function/SubscriptiononUpdateBucketItemauth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptiononUpdateBucketItempostAuth0FunctionSubscriptiononUpdateBucketItempostAuth0FunctionAppSyncFunction96971FD3": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononUpdateBucketItempostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/SubscriptiononUpdateBucketItempostAuth0Function/SubscriptiononUpdateBucketItempostAuth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptionOnUpdateBucketItemDataResolverFnSubscriptionOnUpdateBucketItemDataResolverFnAppSyncFunctionF87A1D9D": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptionOnUpdateBucketItemDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fe3c43ada4b9d681a5e2312663ef7a73386424d73b73e51f8e2e9d4b50f7c502.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e0cff47fb007f0bbf2a4e43ca256d6aa7ec109821769fd79fa7c5e83f0e7f9fc.vtl"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/SubscriptionOnUpdateBucketItemDataResolverFn/SubscriptionOnUpdateBucketItemDataResolverFn.AppSyncFunction"
+   }
+  },
+  "SubscriptiononUpdateBucketItemResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "FieldName": "onUpdateBucketItem",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononUpdateBucketItemauth0FunctionSubscriptiononUpdateBucketItemauth0FunctionAppSyncFunctionF9BABFBA",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononUpdateBucketItempostAuth0FunctionSubscriptiononUpdateBucketItempostAuth0FunctionAppSyncFunction96971FD3",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptionOnUpdateBucketItemDataResolverFnSubscriptionOnUpdateBucketItemDataResolverFnAppSyncFunctionF87A1D9D",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Subscription\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"onUpdateBucketItem\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthauthenticatedUserRole013CC805Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthunauthenticatedUserRole78B3AEDCRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthIdentityPoolA404828ERef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Subscription"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/subscriptionOnUpdateBucketItemResolver"
+   }
+  },
+  "SubscriptiononDeleteBucketItemauth0FunctionSubscriptiononDeleteBucketItemauth0FunctionAppSyncFunction5D8BE61E": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononDeleteBucketItemauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3b6d810ef43cdbd93ef462c40b0df0328b89e04f1473a4f82f1178da1f1d5aa0.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/SubscriptiononDeleteBucketItemauth0Function/SubscriptiononDeleteBucketItemauth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptiononDeleteBucketItempostAuth0FunctionSubscriptiononDeleteBucketItempostAuth0FunctionAppSyncFunction310B6E3E": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononDeleteBucketItempostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/SubscriptiononDeleteBucketItempostAuth0Function/SubscriptiononDeleteBucketItempostAuth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptionOnDeleteBucketItemDataResolverFnSubscriptionOnDeleteBucketItemDataResolverFnAppSyncFunction43463767": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptionOnDeleteBucketItemDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fe3c43ada4b9d681a5e2312663ef7a73386424d73b73e51f8e2e9d4b50f7c502.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e0cff47fb007f0bbf2a4e43ca256d6aa7ec109821769fd79fa7c5e83f0e7f9fc.vtl"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/SubscriptionOnDeleteBucketItemDataResolverFn/SubscriptionOnDeleteBucketItemDataResolverFn.AppSyncFunction"
+   }
+  },
+  "SubscriptiononDeleteBucketItemResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "FieldName": "onDeleteBucketItem",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononDeleteBucketItemauth0FunctionSubscriptiononDeleteBucketItemauth0FunctionAppSyncFunction5D8BE61E",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononDeleteBucketItempostAuth0FunctionSubscriptiononDeleteBucketItempostAuth0FunctionAppSyncFunction310B6E3E",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptionOnDeleteBucketItemDataResolverFnSubscriptionOnDeleteBucketItemDataResolverFnAppSyncFunction43463767",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Subscription\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"onDeleteBucketItem\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthauthenticatedUserRole013CC805Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthunauthenticatedUserRole78B3AEDCRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthIdentityPoolA404828ERef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Subscription"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/subscriptionOnDeleteBucketItemResolver"
+   }
+  },
+  "BucketItemOwnerDataResolverFnBucketItemOwnerDataResolverFnAppSyncFunction095C74A9": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPINONEDS047F5B8DName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "BucketItemOwnerDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/041534e5fd916595f752318f161512d7c7f83b9f2cf32d0f0be381c12253ff68.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/064303962e481067b44300212516363b99aaee539b6bafaf756fdd83ff0b60f0.vtl"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/BucketItemOwnerDataResolverFn/BucketItemOwnerDataResolverFn.AppSyncFunction"
+   }
+  },
+  "BucketItemownerResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+    },
+    "FieldName": "owner",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "BucketItemOwnerDataResolverFnBucketItemOwnerDataResolverFnAppSyncFunction095C74A9",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"BucketItem\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"owner\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthauthenticatedUserRole013CC805Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthunauthenticatedUserRole78B3AEDCRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347authNestedStackauthNestedStackResource2084262COutputsamplifybucketlistappjaydenassisandbox0a34c6e347authamplifyAuthIdentityPoolA404828ERef"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "BucketItem"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/bucketItemOwnerResolver"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/1WQQWvDMAyFf8vujkZbKN1xTdhxG+nuRbGV4CaxgyV3lJD/PjsdHTs9feghPWkLm8MLbJ7wmwtt+mKwDczvxELmJKh7VbbuEwOOJBQylN4ZK9Y7VRP7GDSpMrL48Q9b96jT2PNsbg5Hbxr4wmagIzIpiyPMtR/u7qSLwmnim9MwV6u9aioUPD1G/qe36HQOkdK0tosB10S/m4crhUXx7ozMJAyvWRLDMeqeJAdYsvcjyhRFre10bGddtyjnDcGFn6/bHezTYy5sbRGiEzsS1Hf9AXkkQzI1AQAA"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-bucketlistapp-jaydenassi-sandbox-0a34c6e347/data/amplifyData/BucketItem/CDKMetadata/Default"
+   },
+   "Condition": "CDKMetadataAvailable"
+  }
+ },
+ "Outputs": {
+  "GetAttBucketItemTableStreamArn": {
+   "Description": "Your DynamoDB table StreamArn.",
+   "Value": {
+    "Fn::GetAtt": [
+     "BucketItemTable",
+     "TableStreamArn"
+    ]
+   },
+   "Export": {
+    "Name": {
+     "Fn::Join": [
+      ":",
+      [
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+       },
+       "GetAtt:BucketItemTable:StreamArn"
+      ]
+     ]
+    }
+   }
+  },
+  "GetAttBucketItemTableName": {
+   "Description": "Your DynamoDB table name.",
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "BucketItem-",
+      {
+       "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+      },
+      "-NONE"
+     ]
+    ]
+   },
+   "Export": {
+    "Name": {
+     "Fn::Join": [
+      ":",
+      [
+       {
+        "Ref": "referencetoamplifybucketlistappjaydenassisandbox0a34c6e347dataamplifyDataGraphQLAPIE3BDD0D0ApiId"
+       },
+       "GetAtt:BucketItemTable:Name"
+      ]
+     ]
+    }
+   }
+  }
+ }
+}
