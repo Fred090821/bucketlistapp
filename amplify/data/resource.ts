@@ -9,18 +9,15 @@ and "delete" any "Todo" records.
 
 
 const schema = a.schema({
-  BucketItem: a
-  .model({
+  BucketItem: a.model({
       title: a.string(),
       description: a.string(),
       image: a.string(),
     })
-    .authorization((allow) => [allow.owner()]),  // Restrict access to the owner
+    .authorization((allow) => [allow.owner()]),
 });
 
-
 export type Schema = ClientSchema<typeof schema>;
-
 
 export const data = defineData({
   schema,
