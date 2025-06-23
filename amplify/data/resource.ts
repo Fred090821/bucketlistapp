@@ -6,11 +6,11 @@ adding a new "isDone" field as a boolean. The authorization rule below
 specifies that any unauthenticated user can "create", "read", "update", 
 and "delete" any "Todo" records.
 =========================================================================*/
-import { type ClientSchema, a, defineData } from '@aws-amplify/backend';
 
 
 const schema = a.schema({
-  BucketItem: a.model({
+  BucketItem: a
+  .model({
       title: a.string(),
       description: a.string(),
       image: a.string(),
